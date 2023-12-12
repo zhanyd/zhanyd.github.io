@@ -33,6 +33,10 @@ export default {
                 link: '/network/一张图帮你看懂，在浏览器输入网址回车后，都发生了什么？.md',
               },
               {
+                text: '一张图看懂 8 种网络协议',
+                link: '/network/一张图看懂 8 种网络协议.md',
+              },
+              {
                 text: '在Jekyll中创建一个新的列表页面',
                 link: '/network/在Jekyll中创建一个新的列表页面.md',
               }
