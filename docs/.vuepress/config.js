@@ -1,8 +1,6 @@
 import { defaultTheme } from 'vuepress'
 
 export default {
-  // 将 base 设置为 "/<REPO>/"
-  base: "/blog/",
   lang: 'zh-CN',
   title: 'zhanyd的博客',
   description: '欢迎来到zhanyd的博客',
