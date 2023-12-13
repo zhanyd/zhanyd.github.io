@@ -11,7 +11,6 @@ jobs:
   docs:
 
     permissions:
-      contents: read
       pages: write
       id-token: write
 
@@ -45,7 +44,7 @@ jobs:
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
-      - name: Deploy to GitHub Pages
+      - name: Deploy to gh-pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
           # 部署到 gh-pages 分支
