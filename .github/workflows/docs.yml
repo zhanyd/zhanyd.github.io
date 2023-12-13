@@ -9,13 +9,7 @@ on:
 
 jobs:
   docs:
-
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +21,7 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           # 选择要使用的 pnpm 版本
-          version: 7.28.0
+          version: 8
           # 使用 pnpm 安装依赖
           run_install: true
 
@@ -45,37 +39,13 @@ jobs:
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
-      - name: Deploy to gh-pages
+      - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
           # 部署目录为 VuePress 的默认输出目录
           build_dir: docs/.vuepress/dist
-
-        env:
-          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-
-      # 创建并上传 github-pages artifact
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: .
-          name: github-pages
-
-      - name: upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: github-pages
-          path: /home/runner/work/_temp/artifact.tar    
-
-      # 使用 actions/deploy-pages@v3 部署到 GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v3
-        with:
-          artifact_name: github-pages
-              
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
