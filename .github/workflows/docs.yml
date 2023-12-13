@@ -69,8 +69,9 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v3
         with:
+          target_branch: gh-pages
           # 部署目录为 VuePress 的默认输出目录
-          path: docs/.vuepress/dist
+          path: .
               
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
