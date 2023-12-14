@@ -1,0 +1,1 @@
+import{_ as t,o,c as n,a as e}from"./app-aQkPSHhh.js";const s="/images/wechat_gongzhonghao.jpg",_={},c=e("p",null,"欢迎来到zhanyd的博客",-1),a=e("p",null,"欢迎关注公众号：编程我也会",-1),l=e("p",null,[e("img",{src:s,alt:"公众号"})],-1),i=[c,a,l];function r(d,h){return o(),n("div",null,i)}const p=t(_,[["render",r],["__file","index.html.vue"]]);export{p as default};

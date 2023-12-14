@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,a as n}from"./app-aQkPSHhh.js";const o={},_=n("p",null,"hi 设计模式",-1),s=[_];function a(r,l){return t(),c("div",null,s)}const d=e(o,[["render",a],["__file","index.html.vue"]]);export{d as default};
